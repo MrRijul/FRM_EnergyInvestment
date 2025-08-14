@@ -1,9 +1,11 @@
 This project implements my solution to the Spring 2025 GRA 65131 Financial Risk Management assignment. 
 
 The brief: 
+
 Model monthly prices/utilization for EU power projects (natural gas, coal, wind) and evaluate five financing mixes for a €200 m, 5-year zero-coupon bond targeting 12%—including cash-flow simulations, default testing, optimal face-value calibration, and the value of a derivative that floors monthly cash flows at zero. 
 
 My approach (code-driven): 
+
 I bootstrap historical monthly returns (2011–2025) and couple series with a t-copula to capture joint tail risk; run 10,000 Monte-Carlo paths over 60 months; apply light winsorization and logical bounds (e.g., utilization in [0, 100]%) ; roll operating cash flows; compound retained cash at 2% risk-free; solve for bond face values via numerical optimization; and price the “no-negative-cash-flow” protection as the expected shortfall of negative months. Results and plots are summarized in the report—see the Recommendation panel on page 1 and the default-probability bar chart on page 7. 
 
 Key results (from the report, reproduced by the code):
