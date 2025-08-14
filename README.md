@@ -2,9 +2,10 @@ This project implements my solution to the Spring 2025 GRA 65131 Financial Risk 
 
 In order to recreate the assignment, download the provided data file DataPost.xlsx and change the file path in FinRisk M1.ipynb (jupyter notebook) to run the code for yourself. 
 
-The brief: 
 
-Model monthly prices/utilization for EU power projects (natural gas, coal, wind) and evaluate five financing mixes for a €200 m, 5-year zero-coupon bond targeting 12%—including cash-flow simulations, default testing, optimal face-value calibration, and the value of a derivative that floors monthly cash flows at zero. 
+Assignment: 
+
+Model monthly prices/utilization for EU energy sources and evaluate five bond-financing strategies under risk constraints.
 
 My approach (code-driven): 
 
