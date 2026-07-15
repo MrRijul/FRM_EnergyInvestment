@@ -1,23 +1,30 @@
-This project implements my solution to the Spring 2025 GRA 65131 Financial Risk Management assignment. 
+This repository contains my solution to the Spring 2025 GRA 65131 Financial Risk Management assignment.
 
-In order to recreate the assignment, download the provided data file DataPost.xlsx and change the file path in FinRisk M1.ipynb (jupyter notebook) to run the code for yourself. 
+The project examines how different European energy investments perform under uncertain prices, production levels and financing conditions. The goal was to compare five investment strategies and determine which offered the strongest balance between return and default risk.
 
+Running the project
 
-Assignment: 
+Download DataPost.xlsx, update the file path inside FinRisk M1.ipynb, and run the notebook from the beginning.
 
-Model monthly prices/utilization for EU energy sources and evaluate five bond-financing strategies under risk constraints.
+What I did
 
-My approach (code-driven): 
+I used monthly European energy data from 2011 to 2025 to model how electricity prices, fuel costs, carbon prices and generation levels move together.
 
-I bootstrap historical monthly returns (2011–2025) and couple series with a t-copula to capture joint tail risk; run 10,000 Monte-Carlo paths over 60 months; apply light winsorization and logical bounds (e.g., utilization in [0, 100]%) ; roll operating cash flows; compound retained cash at 2% risk-free; solve for bond face values via numerical optimization; and price the “no-negative-cash-flow” protection as the expected shortfall of negative months. Results and plots are summarized in the report—see the Recommendation panel on page 1 and the default-probability bar chart on page 7. 
+The model then:
 
-Key results (from the report, reproduced by the code):
-Recommended allocation: 65% Wind / 35% Coal (balances low default risk with return; see p. 1). 
+Simulates 10,000 possible market outcomes over five years.
+Converts simulated prices and utilization levels into monthly project cash flows.
+Compares five investment strategies across wind, coal and natural gas.
+Estimates default probabilities and potential losses.
+Calculates the bond face value required to deliver a 12% expected annual return.
+Estimates the cost of protection against negative monthly cash flows.
 
-Default frequencies (illustrative): Wind lowest (~3.9%); Natural Gas highest (~27%); Equal-weight across all three materially worse than Wind/Coal blends (see p. 7–8). 
+Extreme simulated values are limited where necessary, while utilization rates are kept between 0% and 100%. The complete results and visualizations are presented in the accompanying report.
 
-Optimized bond face values (targeting 12% expected return): Wind ≈ €353.9m, Coal ≈ €358.4m, Equal-weight ≈ €367.9m, Natural Gas ≈ €432.5m (tables p. 1 & p. 9–10). 
+Main findings
+Recommended allocation: 65% wind and 35% coal, offering a stronger balance between expected return and default risk.
+Default risk: Wind had the lowest estimated default frequency at approximately 3.9%, while natural gas had the highest at approximately 27%.
+Required bond face value: Approximately €353.9 million for wind, €358.4 million for coal, €367.9 million for the equal-weight strategy and €432.5 million for natural gas.
+Cost of cash-flow protection: Negligible for wind, approximately €1.5 million for coal and €33.6 million for natural gas.
 
-Derivative that floors monthly cash flows: negligible for Wind, ≈€1.5m for Coal, ≈€33.6m for Natural Gas (table p. 10). 
-
-Visuals referenced: forecast fans for prices/utilization (p. 4), projected monthly cash-flow bands (p. 6), retained-cash distributions (p. 7 & p. 11). 
+The report also includes five-year price and utilization forecasts, projected cash-flow ranges, default-risk comparisons and retained-cash distributions.
