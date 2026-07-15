@@ -22,10 +22,9 @@ Estimates the cost of protection against negative monthly cash flows.
 Extreme simulated values are limited where necessary, while utilization rates are kept between 0% and 100%. The complete results and visualizations are presented in the accompanying report.
 
 **Main findings**
-
-**Recommended allocation:** 65% wind and 35% coal, offering a stronger balance between expected return and default risk.
-**Default risk:** Wind had the lowest estimated default frequency at approximately 3.9%, while natural gas had the highest at approximately 27%.
-**Required bond face value:** Approximately €353.9 million for wind, €358.4 million for coal, €367.9 million for the equal-weight strategy and €432.5 million for natural gas.
-**Cost of cash-flow protection:** Negligible for wind, approximately €1.5 million for coal and €33.6 million for natural gas.
+  **Recommended allocation:** 65% wind and 35% coal, offering a stronger balance between expected return and default risk.
+  **Default risk:** Wind had the lowest estimated default frequency at approximately 3.9%, while natural gas had the highest at approximately 27%.
+  **Required bond face value:** Approximately €353.9 million for wind, €358.4 million for coal, €367.9 million for the equal-weight strategy and €432.5 million for natural gas.
+  **Cost of cash-flow protection:** Negligible for wind, approximately €1.5 million for coal and €33.6 million for natural gas.
 
 The report also includes five-year price and utilization forecasts, projected cash-flow ranges, default-risk comparisons and retained-cash distributions.
